@@ -42,7 +42,7 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
     wincl.lpszMenuName = NULL;
     wincl.cbClsExtra = 0;
     wincl.cbWndExtra = 0;
-    wincl.hbrBackground = (HBRUSH) COLOR_BACKGROUND;
+    wincl.hbrBackground = (HBRUSH) COLOR_MENUHILIGHT;
 
     if (!RegisterClassEx (&wincl))
         return 0;
@@ -61,17 +61,8 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
            hThisInstance,
            NULL
            );
-   HWND boutton = CreateWindow (TEXT ("static"),
-    "  BANK PAM  ",
-                                 WS_CHILD | WS_VISIBLE | SS_CENTER,
-                                 150,60,
-                                 1000,40,
-                                 hwnd,
-                                 (HMENU)0,
-                                 NULL,
-                                 NULL) ;
    HWND boutton1 = CreateWindow (TEXT ("button"),
-                                 "*_*OUVRIR UN OU PLUSIEURS COMPTES*_*",
+                                 "OUVRIR UN OU PLUSIEURS COMPTES",
                                  WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
                                  150,150,
                                  1000,40,
@@ -81,7 +72,7 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
                                  NULL) ;
                                  
 HWND boutton2 = CreateWindow (TEXT ("button"),
-                                 "*_*DEPOTS*_*",
+                                 "DEPOTS",
                                  WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
                                  150,200,
                                  1000,40,
@@ -91,7 +82,7 @@ HWND boutton2 = CreateWindow (TEXT ("button"),
                                  NULL) ;
                                  
 HWND boutton3 = CreateWindow (TEXT ("button"),
-                                 "*_*RETRAITS*_*",
+                                 "RETRAITS",
                                  WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
                                  150,250,
                                  1000,40,
@@ -101,7 +92,7 @@ HWND boutton3 = CreateWindow (TEXT ("button"),
                                  NULL) ;
                                  
  HWND boutton4 = CreateWindow (TEXT ("button"),
-                                 "*_*TRANSFERT*_*",
+                                 "TRANSFERT",
                                  WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
                                  150,300,
                                  1000,40,
@@ -111,7 +102,7 @@ HWND boutton3 = CreateWindow (TEXT ("button"),
                                  NULL) ;
                                 
 HWND boutton5 = CreateWindow (TEXT ("button"),
-                                 "*_*MODIFIER UN COMPTE*_* ",
+                                 "MODIFIER UN COMPTE",
                                  WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
                                  150,350,
                                  1000,40,
@@ -121,7 +112,7 @@ HWND boutton5 = CreateWindow (TEXT ("button"),
                                  NULL) ;
  
 HWND boutton6 = CreateWindow (TEXT ("button"),
-                                 "*_* SUPPRIMER UN COMPTE*_* ",
+                                 "SUPPRIMER UN COMPTE ",
                                  WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
                                  150,400,
                                  1000,40,
@@ -131,7 +122,7 @@ HWND boutton6 = CreateWindow (TEXT ("button"),
                                  NULL) ;
 
 HWND boutton7 = CreateWindow (TEXT ("button"),
-                                 "*_* BLOQUER UN COMPTE*_* ",
+                                 "BLOQUER UN COMPTE",
                                  WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
                                  150,450,
                                  1000,40,
@@ -141,7 +132,7 @@ HWND boutton7 = CreateWindow (TEXT ("button"),
                                  NULL) ;
 
 HWND boutton8 = CreateWindow (TEXT ("button"),
-                                 " *AFFICHER LES COMPTES* ",
+                                 "AFFICHER LES COMPTES",
                                  WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
                                  150,500,
                                  1000,40,
@@ -151,7 +142,7 @@ HWND boutton8 = CreateWindow (TEXT ("button"),
                                  NULL) ;
                                  
 HWND boutton9 = CreateWindow (TEXT ("button"),
-                                 "*_* QUITTER LE PROGRAMME*_* ",
+                                 "QUITTER LE PROGRAMME",
                                  WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
                                  150,550,
                                  1000,40,
