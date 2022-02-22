@@ -5,7 +5,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include<iostream>
-//#include<graphiics.h>
 
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 int rech(int numRech);
